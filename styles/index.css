@@ -1,0 +1,37 @@
+header {
+    background-color: rgb(39, 16, 56);
+}
+
+
+#header-logo {
+    width: 40px;
+    height: 40px;
+    clip-path: circle();
+}
+
+#header-logo img {
+    width: 40px;
+
+}
+
+#profile {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+#profile_photo {
+    width: 100px;
+    height: auto;
+    clip-path: circle();
+}
+
+
+#skills {
+    width: auto;
+    text-align: center;
+}
+
+#skills div {
+    display: inline-block;
+}
