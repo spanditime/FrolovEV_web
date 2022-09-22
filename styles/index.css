@@ -1,7 +1,39 @@
-header {
-    background-color: rgb(39, 16, 56);
+:root {
+    /* CSS HEX */
+    --secondary: #610C63;
+    --main: #810955;
+    --accent1: #EE81B3;
+    --accent2: #FFF9D7;
+    --razzmic-berry: #7F4873ff;
+
+
 }
 
+* {
+    margin: 0px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+header {
+    background-color: var(--main);
+}
+
+main {
+    background-color: var(--accent2);
+    padding: 8pt;
+}
+
+footer {
+    background-color: var(--main);
+}
+
+nav ul li {
+    display: inline-block;
+}
 
 #header-logo {
     width: 40px;
@@ -14,10 +46,25 @@ header {
 
 }
 
-#profile {
+#slider_background_image {
     width: 100%;
+    height: 200pt;
+    overflow: hidden;
+}
+
+#slider_background_image img {
+    width: 100%;
+    filter: blur(4px);
+}
+
+main section {
+    background-color: var(--secondary);
+    width: calc(100% - 16pt);
     text-align: center;
-    padding: 10px;
+    padding: 8pt;
+    border-radius: 8pt;
+    margin-bottom: 15pt;
+    margin-top: 10pt;
 }
 
 #profile_photo {
@@ -30,8 +77,40 @@ header {
 #skills {
     width: auto;
     text-align: center;
+    display: flex;
+    flex-flow: row;
 }
 
-#skills div {
-    display: inline-block;
+#skills div.skill_note {
+    position: relative;
+    flex: auto;
+    margin-left: 6pt;
+    margin-right: 6pt;
+}
+
+#skills div.skill_note:after {
+    content: "";
+    display: block;
+    padding-top: calc(100%);
+}
+
+#skills div.squared_content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    background-color: var(--accent1);
+    clip-path: circle();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skills div.skill_note_circles {
+    flex: auto;
+}
+
+#skills div.skill_note_circles img {
+    width: 40%;
 }
